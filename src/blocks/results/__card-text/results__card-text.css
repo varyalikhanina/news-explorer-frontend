@@ -1,0 +1,35 @@
+.results__card-text {
+  font-family: 'Roboto', 'Arial';
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #1A1B22;
+  margin: 0 24px;
+  padding: 0;
+  max-height: 90px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .results__card-text {
+    max-height: 110px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .results__card-text {
+    max-height: 130px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .results__card-text {
+    max-height: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .results__card-text {
+    margin: 0 16px;
+  }
+}

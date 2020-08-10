@@ -1,0 +1,24 @@
+@import url('_keyword/results__card-icon-button_keyword.css');
+@import url('_message/results__card-icon-button_message.css');
+
+.results__card-icon-button {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 22px rgba(59, 74, 116, 0.1);
+  border-radius: 10px;
+  font-family: 'Roboto', 'Arial';
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  border-radius: 10px;
+  border: none;
+  height: 40px;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 1100px) {
+  .results__card-icon-button {
+    display: none;
+  }
+}

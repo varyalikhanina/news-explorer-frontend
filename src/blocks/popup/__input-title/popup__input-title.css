@@ -1,0 +1,8 @@
+.popup__input-title {
+  font-family: 'Inter', 'Arial';
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #2F71E5;
+  margin: 13px auto 0;
+}

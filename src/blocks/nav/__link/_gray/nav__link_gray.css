@@ -1,0 +1,8 @@
+.nav__link_gray {
+  color: #B6BCBF;
+  transition: .2s ease-in-out;
+}
+
+.nav__link_gray:hover {
+  color: #fff;
+}

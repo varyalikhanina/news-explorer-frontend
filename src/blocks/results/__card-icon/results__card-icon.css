@@ -1,0 +1,33 @@
+.results__card-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.results__card-icon:hover~.results__card-icon-button_message {
+  visibility: visible;
+}
+
+@media screen and (max-width: 900px) {
+  .results__card-icon {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+    .results__card-icon {
+        top: 16px;
+        right: 16px;
+    }
+}

@@ -1,0 +1,19 @@
+@import url('__articles/info__articles.css');
+@import url('__greeting/info__greeting.css');
+@import url('__keywords/info__keywords.css');
+
+.info {
+  padding-left: 104px;
+}
+
+@media screen and (max-width: 769px) {
+  .info {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info {
+    padding-left: 16px;
+  }
+}

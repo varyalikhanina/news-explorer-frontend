@@ -1,0 +1,8 @@
+.results__card {
+  min-height: 576px;
+  max-width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+}

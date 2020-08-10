@@ -1,0 +1,25 @@
+.results__heading {
+  font-family: 'Roboto Slab', 'Arial';
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+  color: #1A1B22;
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 900px) {
+  .results__heading {
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .results__heading {
+    max-width: 288px;
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 24px;
+  }
+}

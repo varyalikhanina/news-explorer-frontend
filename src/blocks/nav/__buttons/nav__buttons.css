@@ -1,0 +1,14 @@
+@import url('_mobile/nav__buttons_mobile.css');
+@import url('_index/nav__buttons_hidden.css');
+
+.nav__buttons {
+  justify-content: space-between;
+  display: flex;
+  height: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__buttons {
+    display: none;
+  }
+}

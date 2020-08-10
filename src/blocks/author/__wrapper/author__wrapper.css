@@ -1,0 +1,14 @@
+@import url('../__image/author__image.css');
+@import url('../__info/author__info.css');
+@import url('../__link/author__link.css');
+
+.author__wrapper {
+  display: flex;
+}
+
+@media screen and (max-width: 769px) {
+  .author__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,7 @@
+.results__card-icon:hover .results__card-icon-image_save.results__card-icon-image_disabled {
+  stroke: #000;
+}
+
+.results__card-icon:hover .results__card-icon-image_delete.results__card-icon-image_disabled {
+  fill: #000;
+}
