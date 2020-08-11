@@ -1,9 +1,9 @@
-.nav__buttons_hidden {
+.nav__buttons_before-login {
   display: flex;
 }
-
+/*
 @media screen and (max-width: 768px) {
-  .nav__buttons_hidden {
+  .nav__buttons_before-login {
     display: none;
   }
-}
+} */

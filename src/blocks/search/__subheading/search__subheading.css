@@ -8,7 +8,7 @@
   margin: 0 auto 64px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .search__subheading {
     max-width: 452px;
     margin: 0 auto 48px;

@@ -14,10 +14,10 @@
     <header class="header">
       <nav class="nav nav_articles">
         <h3 class="nav__logo nav__logo_articles">NewsExplorer</h3>
-        <div class="nav__buttons">
-          <a href="../index/index.html" class="nav__link nav__link_black">Главная</a>
-          <a href="./articles.html" class="nav__link nav__link_black nav__link_black-underlined">Сохранённые статьи</a>
-          <button class="nav__authorize nav__authorize_logout nav__authorize_black">Варя<img class="nav__authorize-icon" src="../images/Union-black.png" alt="В личный кабинет"></button>
+        <div class="nav__buttons nav__buttons_articles nav__buttons_after-login">
+          <a href="./index.html" class="nav__link nav__link_black nav__link_black-underlined">Главная</a>
+          <a href="./articles.html" class="nav__link nav__link_gray">Сохранённые статьи</a>
+          <button class="nav__authorize nav__authorize_logout nav__authorize_black">Варя<img class="nav__authorize-icon nav__authorize-icon_black" src="<%=require('../../images/Union-black.png')%>" alt="В личный кабинет"></button>
         </div>
         <img class="nav__burger" src="<%=require('../../images/menu-black.png')%>" alt="Меню">
       </nav>
@@ -28,7 +28,7 @@
             <img class="nav__close" src="<%=require('../../images/close.png')%>" alt="Закрыть меню">
           </div>
           <div class="nav__mobile-menu">
-            <a href="../index/index.html" class="nav__link nav__link_white">Главная</a>
+            <a href="./index.html" class="nav__link nav__link_white">Главная</a>
             <button class="nav__authorize nav__authorize_white nav__authorize_mobile">Авторизоваться</button>
           </div>
         </div>

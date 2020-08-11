@@ -4,5 +4,5 @@
 }
 
 .nav__link_gray:hover {
-  color: #fff;
+  opacity: 0.8;
 }

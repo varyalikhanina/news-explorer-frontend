@@ -17,7 +17,7 @@
   background-color: #2A65CC;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .search__form-button {
     width: 160px;
     left: 290px;

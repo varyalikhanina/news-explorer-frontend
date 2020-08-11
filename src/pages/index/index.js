@@ -3,6 +3,8 @@
 import './index.css';
 
 const nav = document.querySelector('.nav');
+const buttonsBeforeLogin = document.querySelector('.nav__buttons_before-login');
+const buttonsAfterLogin = document.querySelector('.nav__buttons_after-login');
 const mobileMenu = document.querySelector('.nav_mobile');
 const navButtons = document.querySelector('.nav__buttons');
 const results = document.querySelector('.results__cards');
@@ -72,16 +74,18 @@ popupSuccessCloseButton.addEventListener('click', popUpSuccessToggle);
 successLoginLink.addEventListener('click', popUpLoginToggle);
 loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  nav.removeChild(navButtons);
-  const newButtons = `
-    <div class="nav__buttons">
-        <a href="index.html" class="nav__link nav__link_white nav__link_white-underlined">Главная</a>
-        <a href="../articles/articles.html" class="nav__link nav__link_gray">Сохранённые статьи</a>
-        <button class="nav__authorize nav__authorize_logout nav__authorize_white">Варя<img class="nav__authorize-icon nav__authorize-icon_white" src="../images/Union-white.png" alt="В личный кабинет"></button>
-    </div>`;
-  nav.insertAdjacentHTML('beforeend', newButtons);
+  buttonsBeforeLogin.style.display = 'none';
+  buttonsAfterLogin.style.display = 'flex';
   popUpLoginToggle();
 });
+window.addEventListener('resize', (event) => {
+  if(window.innerWidth <= 768) {
+    buttonsBeforeLogin.style.display = 'none';
+    buttonsAfterLogin.style.display = 'none';
+    burger.style.display = 'block';
+  }
+});
+// доработать скрытие бургера и открытие нужных кнопок меню (для входа или в залогиненном состоянии)
 burger.addEventListener('click', showMobileMenu);
 mobileMenuClose.addEventListener('click', showMobileMenu);
 

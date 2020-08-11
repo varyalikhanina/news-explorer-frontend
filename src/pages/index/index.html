@@ -14,9 +14,14 @@
     <header class="header header_index">
       <nav class="nav nav_index">
         <h3 class="nav__logo nav__logo_index">NewsExplorer</h3>
-        <div class="nav__buttons nav__buttons_hidden">
+        <div class="nav__buttons nav__buttons_before-login">
           <a href="./index.html" class="nav__link nav__link_white">Главная</a>
           <button class="nav__authorize nav__authorize_white">Авторизоваться</button>
+        </div>
+        <div class="nav__buttons nav__buttons_after-login">
+          <a href="./index.html" class="nav__link nav__link_white nav__link_white-underlined">Главная</a>
+          <a href="./articles.html" class="nav__link nav__link_gray">Сохранённые статьи</a>
+          <button class="nav__authorize nav__authorize_logout nav__authorize_white">Варя<img class="nav__authorize-icon nav__authorize-icon_white" src="<%=require('../../images/Union-white.png')%>" alt="В личный кабинет"></button>
         </div>
         <img class="nav__burger" src="<%=require('../../images/menu-white.png')%>" alt="Меню">
       </nav>
@@ -36,7 +41,7 @@
         <h1 class="search__heading">Что в мире<br>творится?</h1>
         <p class="search__subheading">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <form class="search__form">
-          <input class="search__form-input" type="search" placeholder="Введите тему новости">
+          <input class="search__form-input" type="search" placeholder="Введите тему новости" required>
           <button class="button search__form-button" type="submit">Искать</button>
         </form>
       </div>

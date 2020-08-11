@@ -9,7 +9,7 @@
   max-width: 608px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .search__heading {
     font-size: 36px;
     line-height: 40px;
