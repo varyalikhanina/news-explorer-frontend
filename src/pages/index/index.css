@@ -12,3 +12,7 @@
 @import url('../../blocks/author/author.css');
 @import url('../../blocks/footer/footer.css');
 @import url('../../vendor/fonts.css');
+
+body {
+  margin: 0 auto;
+}
