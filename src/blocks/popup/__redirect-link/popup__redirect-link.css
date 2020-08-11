@@ -1,0 +1,19 @@
+.popup__redirect-link {
+  text-decoration: none;
+  font-family: 'Inter', 'Arial';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #2F71E5;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  transition: .2s ease-in-out;
+  padding: 0;
+}
+
+.popup__redirect-link:hover {
+  opacity: 0.8;
+}

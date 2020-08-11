@@ -1,0 +1,11 @@
+.popup__content_login {
+    max-height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__content_login {
+    max-height: calc(100% - 56px);
+    margin-top: 56px;
+    border-radius: 16px 16px 0 0;
+  }
+}

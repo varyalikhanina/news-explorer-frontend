@@ -1,0 +1,30 @@
+@import url('__heading/results__heading.css');
+@import url('__cards/results__cards.css');
+@import url('__card/results__card.css');
+@import url('__card-image/results__card-image.css');
+@import url('__card-heading/results__card-heading.css');
+@import url('__card-date/results__card-date.css');
+@import url('__card-text/results__card-text.css');
+@import url('__card-source/results__card-source.css');
+@import url('__card-icon-button/results__card-icon-button.css');
+@import url('__card-icon-image/results__card-icon-image.css');
+@import url('__card-icon/results__card-icon.css');
+@import url('__show-more/results__show-more.css');
+@import url('__card-image-keyword/results__card-image-keyword.css');
+
+.results {
+  padding: 80px 104px;
+  background-color: #F5F6F7;
+}
+
+@media screen and (max-width: 900px) {
+  .results {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .results {
+    padding: 32px 16px;
+  }
+}

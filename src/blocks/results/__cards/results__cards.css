@@ -1,0 +1,21 @@
+.results__cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 16px;
+  margin-bottom: 64px;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+  .results__cards {
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+    margin-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .results__cards {
+    grid-template-columns: auto;
+  }
+}

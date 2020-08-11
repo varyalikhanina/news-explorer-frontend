@@ -1,0 +1,31 @@
+@import url('_black/nav__link_black.css');
+@import url('_gray/nav__link_gray.css');
+@import url('_white/nav__link_white.css');
+@import url('_black-underlined/nav__link_black-underlined.css');
+@import url('_white-underlined/nav__link_white-underlined.css');
+
+.nav__link {
+  text-decoration: none;
+  font-family: 'Roboto', 'Arial';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__link {
+    font-size: 16px;
+    margin-right: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav__link {
+    margin: 20px 0;
+  }
+}

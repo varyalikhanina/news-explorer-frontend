@@ -1,0 +1,9 @@
+@import url('_disabled/results__card-icon-image_disabled.css');
+@import url('_blue/results__card-icon-image_blue.css');
+@import url('_delete/results__card-icon-image_delete.css');
+@import url('_save/results__card-icon-image_save.css');
+
+.results__card-icon-image {
+  stroke-width: 2px;
+  transition: .2s ease-in-out;
+}

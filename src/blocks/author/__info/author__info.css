@@ -1,0 +1,24 @@
+@import url('../__info-heading/author__info-heading.css');
+@import url('../__info-subheading/author__info-subheading.css');
+
+.author__info {
+  max-width: 600px;
+  margin-left: 56px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 1200px) {
+  .author__info {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .author__info {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,18 @@
+@import url('_articles/nav__logo_articles.css');
+@import url('_index/nav__logo_index.css');
+
+.nav__logo {
+  font-family: 'Roboto Slab', 'Arial';
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__logo {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+}

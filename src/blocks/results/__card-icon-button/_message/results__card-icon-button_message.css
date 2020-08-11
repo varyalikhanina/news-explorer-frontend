@@ -1,0 +1,8 @@
+.results__card-icon-button_message {
+    font-size: 12px;
+    line-height: 14px;
+    position: absolute;
+    top: 24px;
+    right: 69px;
+    visibility: hidden;
+}

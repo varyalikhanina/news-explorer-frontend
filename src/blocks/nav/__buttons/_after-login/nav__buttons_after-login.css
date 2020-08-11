@@ -1,0 +1,13 @@
+.nav__buttons_after-login {
+  display: none;
+}
+
+.nav__buttons_articles.nav__buttons_after-login {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__buttons_articles.nav__buttons_after-login {
+    display: none;
+  }
+}

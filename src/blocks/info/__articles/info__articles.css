@@ -1,0 +1,21 @@
+.info__articles {
+  font-family: 'Roboto', 'Arial';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  .info__articles {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .info__articles {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,12 @@
+.nav__burger {
+  display: none;
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__burger {
+    display: block;
+    margin-right: 16px;
+  }
+}

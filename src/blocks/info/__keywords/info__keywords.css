@@ -1,0 +1,24 @@
+@import url('_bold/info__keywords_bold.css');
+
+.info__keywords {
+  font-family: 'Roboto', 'Arial';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin: 30px auto 56px;
+}
+
+@media screen and (max-width: 768px) {
+  .info__keywords {
+    font-size: 14px;
+    margin: 16px auto 32px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .info__keywords {
+    font-size: 18px;
+  }
+}

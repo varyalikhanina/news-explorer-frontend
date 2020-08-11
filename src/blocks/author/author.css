@@ -1,0 +1,18 @@
+@import url('__wrapper/author__wrapper.css');
+
+.author {
+  background-color: #fff;
+  padding: 80px 104px;
+}
+
+@media screen and (max-width: 768px) {
+  .author {
+    padding: 61px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .author {
+    padding: 32px 24px 80px;
+  }
+}

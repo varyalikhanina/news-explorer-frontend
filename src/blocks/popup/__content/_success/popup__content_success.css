@@ -1,0 +1,9 @@
+.popup__content_success {
+  max-height: 182px;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__content_success {
+    border-radius: 16px;
+  }
+}

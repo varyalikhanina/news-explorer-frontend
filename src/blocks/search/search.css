@@ -1,0 +1,19 @@
+@import url('__heading/search__heading.css');
+@import url('__subheading/search__subheading.css');
+@import url('__form/search__form.css');
+
+.search {
+  padding: 80px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    padding: 38px 0 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+    padding: 30px 16px;
+  }
+}

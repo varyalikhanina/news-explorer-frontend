@@ -1,0 +1,14 @@
+.author__info-subheading {
+  font-family: 'Roboto', 'Arial';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .author__info-subheading {
+    margin-bottom: 15px;
+  }
+}

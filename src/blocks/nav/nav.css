@@ -1,0 +1,35 @@
+@import url('_index/nav_index.css');
+@import url('_mobile/nav_mobile.css');
+@import url('_articles/nav_articles.css');
+@import url('__authorize-icon/nav__authorize-icon.css');
+@import url('__authorize/nav__authorize.css');
+@import url('__buttons/nav__buttons.css');
+@import url('__link/nav__link.css');
+@import url('__logo/nav__logo.css');
+@import url('__burger/nav__burger.css');
+@import url('__close/nav__close.css');
+@import url('__mobile-wrapper/nav__mobile-wrapper.css');
+@import url('__mobile-menu/nav__mobile-menu.css');
+@import url('__content.css/nav__content.css');
+@import url('_is-opened/nav_is-opened.css');
+
+.nav {
+  min-height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 104px;
+}
+
+@media screen and (max-width: 840px) {
+  .nav {
+    min-height: 66px;
+    padding: 0 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    min-height: 56px;
+    padding: 0;
+  }
+}

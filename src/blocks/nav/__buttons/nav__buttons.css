@@ -1,0 +1,14 @@
+@import url('_mobile/nav__buttons_mobile.css');
+@import url('_after-login/nav__buttons_after-login.css');
+@import url('_before-login/nav__buttons_before-login.css');
+
+.nav__buttons {
+  justify-content: space-between;
+  height: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__buttons {
+    display: none;
+  }
+}
