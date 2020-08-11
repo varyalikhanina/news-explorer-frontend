@@ -23,6 +23,10 @@
   color: #B6BCBF;
 }
 
+.search__form-input:focus {
+  caret-color: #2F71E5;
+}
+
 @media screen and (max-width: 768px) {
   .search__form-input {
     margin-bottom: 16px;
