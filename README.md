@@ -1,8 +1,5 @@
 # Инфраструктура и верстка для News Explorer
 
-<<<<<<< HEAD
-Updates coming soon
-=======
 [Посмотреть на GH-Pages](https://varyalikhanina.github.io/news-explorer-frontend/)
 
 ## Используемые технологии
@@ -39,4 +36,3 @@ npm run dev
 ```bash
 npm run deploy
 ```
->>>>>>> c210e77c78538bcdfd5e1b23004d4eb87d25f82a
