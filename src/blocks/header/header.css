@@ -1,2 +1,6 @@
 @import url('_index/header_index.css');
 @import url('_articles/header_articles.css');
+
+.header {
+  max-height: 576px;
+}

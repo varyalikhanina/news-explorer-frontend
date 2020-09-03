@@ -5,7 +5,7 @@
 .not-found {
   min-height: 374px;
   background-color: #F5F6F7;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;

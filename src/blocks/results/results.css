@@ -2,6 +2,7 @@
 @import url('__cards/results__cards.css');
 @import url('__card/results__card.css');
 @import url('__card-image/results__card-image.css');
+@import url('__card-link/results__card-link.css');
 @import url('__card-heading/results__card-heading.css');
 @import url('__card-date/results__card-date.css');
 @import url('__card-text/results__card-text.css');
@@ -15,6 +16,7 @@
 .results {
   padding: 80px 104px;
   background-color: #F5F6F7;
+  display: none;
 }
 
 @media screen and (max-width: 900px) {

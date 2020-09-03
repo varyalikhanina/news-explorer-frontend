@@ -21,19 +21,24 @@
         <div class="nav__buttons nav__buttons_after-login">
           <a href="./index.html" class="nav__link nav__link_white nav__link_white-underlined">Главная</a>
           <a href="./articles.html" class="nav__link nav__link_gray">Сохранённые статьи</a>
-          <button class="nav__authorize nav__authorize_logout nav__authorize_white">Варя<img class="nav__authorize-icon nav__authorize-icon_white" src="<%=require('../../images/Union-white.png')%>" alt="В личный кабинет"></button>
+          <button class="nav__authorize nav__authorize_logout nav__authorize_white"><div class="nav__authorize-name"></div><img class="nav__authorize-icon nav__authorize-icon_white" src="<%=require('../../images/Union-white.png')%>" alt="В личный кабинет"></button>
         </div>
         <img class="nav__burger" src="<%=require('../../images/menu-white.png')%>" alt="Меню">
       </nav>
       <nav class="nav nav_mobile">
-        <div class="nav__content">
+        <div class="nav__content nav__content_index">
           <div class="nav__mobile-wrapper">
             <h3 class="nav__logo nav__logo_index">NewsExplorer</h3>
             <img class="nav__close" src="<%=require('../../images/close.png')%>" alt="Закрыть меню">
           </div>
-          <div class="nav__mobile-menu">
+          <div class="nav__mobile-menu nav__mobile-menu_unauthorized">
             <a href="./index.html" class="nav__link nav__link_white">Главная</a>
             <button class="nav__authorize nav__authorize_white nav__authorize_mobile">Авторизоваться</button>
+          </div>
+          <div class="nav__mobile-menu nav__mobile-menu_authorized">
+            <a href="./index.html" class="nav__link nav__link_white">Главная</a>
+            <a href="./articles.html" class="nav__link nav__link_gray">Сохранённые статьи</a>
+            <button class="nav__authorize nav__authorize_logout nav__authorize_white nav__authorize_logout-mobile"><div class="nav__authorize-name nav__authorize-name_mobile"></div><img class="nav__authorize-icon nav__authorize-icon_white" src="<%=require('../../images/Union-white.png')%>" alt="В личный кабинет"></button>
           </div>
         </div>
       </nav>
@@ -41,8 +46,9 @@
         <h1 class="search__heading">Что в мире<br>творится?</h1>
         <p class="search__subheading">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
         <form class="search__form">
-          <input class="search__form-input" type="search" placeholder="Введите тему новости" required>
+          <input class="search__form-input" pattern="[а-яА-Я]{1,}|[a-zA-Z]{1,}" type="search" placeholder="Введите тему новости" required>
           <button class="button search__form-button" type="submit">Искать</button>
+          <span class="search__form-error"></span>
         </form>
       </div>
     </header>
@@ -55,9 +61,9 @@
           <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
           <span class="error-message"></span>
           <p class="popup__input-title">Пароль</p>
-          <input type="password" name="password" class="popup__input popup__input_type_pasword" placeholder="Введите пароль" required>
+          <input type="password" name="password" class="popup__input popup__input_type_pasword" minlength="8" maxlength="30" placeholder="Введите пароль" required>
           <span class="error-message"></span>
-          <button type="submit" class="button popup__button popup__button_disabled">Войти</button>
+          <button type="submit" class="button popup__button popup__button_disabled" disabled>Войти</button>
         </form>
         <span class="error-message"></span>
         <p class="popup__redirect popup__redirect_signup">или <button class="popup__redirect-link popup__redirect-link_signup">Зарегистрироваться</button></p>
@@ -72,12 +78,12 @@
         <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
         <span class="error-message"></span>
         <p class="popup__input-title">Пароль</p>
-        <input type="password" name="password" class="popup__input popup__input_type_pasword" placeholder="Введите пароль" required>
+        <input type="password" name="password" class="popup__input popup__input_type_pasword" minlength="8" maxlength="30" placeholder="Введите пароль" required>
         <span class="error-message"></span>
         <p class="popup__input-title">Имя</p>
-        <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Введите почту" required>
-        <span class="error-message"></span>
-        <button type="submit" class="button popup__button popup__button_disabled">Зарегистрироваться</button>
+        <input type="text" name="name" class="popup__input popup__input_type_name" minlength="2" maxlength="30" placeholder="Введите имя" required>
+        <span class="error-message error-message_user-exists"></span>
+        <button type="submit" class="button popup__button popup__button_disabled" disabled>Зарегистрироваться</button>
       </form>
       <p class="popup__redirect popup__redirect_login">или <button class="popup__redirect-link popup__redirect-link_login">Войти</button></p>
       </div>
@@ -98,74 +104,23 @@
       <h3 class="not-found__heading">Ничего не найдено</h3>
       <p class="not-found__subheading">К сожалению по вашему запросу ничего не найдено.</p>
     </div>
+    <div class="error">
+      <h4 class="error__heading">Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</h4>
+    </div>
     <section class="results">
       <h2 class="results__heading">Результаты поиска</h2>
-      <div class="results__cards">
+      <template id="results__card-template">
         <div class="results__card">
-          <img class="results__card-image" src="<%=require('../../images/card-1.jpg')%>" alt="Иллюстрация к новости">
-          <p class="results__card-date">2 августа, 2019</p>
-          <h3 class="results__card-heading">Национальное достояние – парки</h3>
-          <p class="results__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="results__card-source">Лента.ру</p>
-          <button class="results__card-icon">
-            <svg class="results__card-icon-image results__card-icon-image_save results__card-icon-image_blue" width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z"/>
-            </svg>
-          </button>
-          <button class="results__card-icon-button results__card-icon-button_message">Войдите, чтобы сохранять статьи</button>
+          <img class="results__card-image" src="" alt="Иллюстрация к новости">
+          <p class="results__card-date"></p>
+          <a href="" class="results__card-link" target="_blank">
+            <h3 class="results__card-heading"></h3>
+          </a>
+          <p class="results__card-text"></p>
+          <p class="results__card-source"></p>
         </div>
-          <div class="results__card">
-            <img class="results__card-image" src="<%=require('../../images/card-2.jpg')%>" alt="Иллюстрация к новости">
-            <p class="results__card-date">2 августа, 2019</p>
-            <h3 class="results__card-heading">Лесные огоньки: история одной фотографии</h3>
-            <p class="results__card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-            <p class="results__card-source">Медуза</p>
-            <button class="results__card-icon">
-              <svg class="results__card-icon-image results__card-icon-image_save results__card-icon-image_disabled" width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z"/>
-              </svg>
-            </button>
-            <button class="results__card-icon-button results__card-icon-button_message">Войдите, чтобы сохранять статьи</button>
-          </div>
-          <div class="results__card">
-            <img class="results__card-image" src="<%=require('../../images/card-3.jpg')%>" alt="Иллюстрация к новости">
-            <p class="results__card-date">2 августа, 2019</p>
-            <h3 class="results__card-heading">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="results__card-text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="results__card-source">РИА</p>
-            <button class="results__card-icon">
-              <svg class="results__card-icon-image results__card-icon-image_save results__card-icon-image_disabled" width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z"/>
-              </svg>
-            </button>
-            <button class="results__card-icon-button results__card-icon-button_message">Войдите, чтобы сохранять статьи</button>
-          </div>
-          <div class="results__card">
-            <img class="results__card-image" src="<%=require('../../images/card-4.jpg')%>" alt="Иллюстрация к новости">
-            <p class="results__card-date">2 августа, 2019</p>
-            <h3 class="results__card-heading">Национальное достояние – парки</h3>
-            <p class="results__card-text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-            <p class="results__card-source">ДЗЕН</p>
-            <button class="results__card-icon">
-              <svg class="results__card-icon-image results__card-icon-image_save results__card-icon-image_disabled" width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z"/>
-              </svg>
-            </button>
-            <button class="results__card-icon-button results__card-icon-button_message">Войдите, чтобы сохранять статьи</button>
-          </div>
-          <div class="results__card">
-            <img class="results__card-image" src="<%=require('../../images/card-5.jpg')%>" alt="Иллюстрация к новости">
-            <p class="results__card-date">2 августа, 2019</p>
-            <h3 class="results__card-heading">Лесные огоньки: история одной фотографии</h3>
-            <p class="results__card-text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-            <p class="results__card-source">АФИША</p>
-            <button class="results__card-icon">
-              <svg class="results__card-icon-image results__card-icon-image_save results__card-icon-image_disabled" width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.38218 12.7137L1 16.9425V1L13 1V16.9425L7.61782 12.7137L7 12.2283L6.38218 12.7137Z"/>
-              </svg>
-            </button>
-            <button class="results__card-icon-button results__card-icon-button_message">Войдите, чтобы сохранять статьи</button>
-          </div>
+      </template>
+      <div class="results__cards">
       </div>
       <button class="results__show-more">Показать еще</button>
     </section>
