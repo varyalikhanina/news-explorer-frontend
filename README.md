@@ -4,14 +4,17 @@ News Explorer - это сервис для поиска новостей. Зде
 
 Посмотреть по ссылкам:
 
-[https://varyalikhanina.github.io/news-explorer-frontend/]
-[https://news-explorer-project.ml/]
-[https://www.news-explorer-project.ml/]
+[https://varyalikhanina.github.io/news-explorer-frontend/](https://varyalikhanina.github.io/news-explorer-frontend/)
+
+[https://news-explorer-project.ml/](https://news-explorer-project.ml/)
+
+[https://www.news-explorer-project.ml/](https://www.news-explorer-project.ml/)
 
 Бэкенд доступен по ссылкам:
 
-[https://api.news-explorer-project.ml/]
-[https://www.api.news-explorer-project.ml/]
+[https://api.news-explorer-project.ml/](https://api.news-explorer-project.ml/)
+
+[https://www.api.news-explorer-project.ml/](https://www.api.news-explorer-project.ml/)
 
 ## Используемые технологии
 
@@ -47,4 +50,3 @@ npm run dev
 ```bash
 npm run deploy
 ```
-
