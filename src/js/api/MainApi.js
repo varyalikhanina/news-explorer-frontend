@@ -10,6 +10,7 @@ export default class MainApi {
   signup(email, password, name) {
     return fetch(`${this.url}/signup`,
       {
+        credentials: 'include',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,6 +38,7 @@ export default class MainApi {
   signin(email, password) {
     return fetch(`${this.url}/signin`,
       {
+        credentials: 'include',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -59,6 +61,7 @@ export default class MainApi {
 
   getUserData() {
     return fetch(`${this.url}/users/me`, {
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -79,6 +82,7 @@ export default class MainApi {
 
   getArticles() {
     return fetch(`${this.url}/articles`, {
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -100,6 +104,7 @@ export default class MainApi {
       title, text, date, source, keyword, link, image, articleID,
     } = article;
     return fetch(`${this.url}/articles`, {
+      credentials: 'include',
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -129,6 +134,7 @@ export default class MainApi {
 
   removeArticle(articleID) {
     return fetch(`${this.url}/articles/${articleID}`, {
+      credentials: 'include',
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
