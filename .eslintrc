@@ -3,5 +3,10 @@
   "env": {
     "browser": true,
     "node": true
+  },
+  "rules": {
+    "no-underscore-dangle": "off",
+    "no-new": "off",
+    "no-console": "off",
   }
 }

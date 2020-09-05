@@ -1,5 +1,8 @@
+@import url('_unauthorized/nav__mobile-menu_unathorized.css');
+@import url('_authorized/nav__mobile-menu_authorized.css');
+@import url('_articles/nav__mobile-menu_articles.css');
+
 .nav__mobile-menu {
-  display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0;

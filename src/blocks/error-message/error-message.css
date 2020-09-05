@@ -6,3 +6,7 @@
   color: #FF0000;
   padding-top: 3px;
 }
+
+.error-message:last-of-type {
+  margin-top: 13px;
+}

@@ -1,6 +1,7 @@
 @import url('__heading/search__heading.css');
 @import url('__subheading/search__subheading.css');
 @import url('__form/search__form.css');
+@import url('__error/search__form-error.css');
 
 .search {
   padding: 80px 0;

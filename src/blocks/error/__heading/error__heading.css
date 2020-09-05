@@ -1,0 +1,9 @@
+.error__heading {
+  font-family: 'Roboto Slab', 'Arial';
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #B6BCBF;
+  margin: 0 auto 16px;
+}
