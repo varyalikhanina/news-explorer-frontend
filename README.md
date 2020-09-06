@@ -2,6 +2,8 @@
 
 News Explorer - это сервис для поиска новостей. Здесь можно сохранять интересные вам новости, после чего они будут доступны в личном кабинете.
 
+Важно: функционал с поиском новостей доступен для теста только на локалхосте.
+
 Посмотреть по ссылкам:
 
 [https://varyalikhanina.github.io/news-explorer-frontend/](https://varyalikhanina.github.io/news-explorer-frontend/)
